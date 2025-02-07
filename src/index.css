@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes borderGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+  50% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 1s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 1s ease-out;
+}
+
+.animate-borderGlow {
+  animation: borderGlow 2s infinite;
+}
+
+.section-container {
+  @apply container mx-auto px-4 max-w-4xl;
+}
+
+.section-content {
+  @apply bg-black rounded-xl p-6 border-2 border-white animate-borderGlow text-white overflow-hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-black;
+}
+
+/* Ensure text wrapping and content fitting */
+h1, h2, h3, p {
+  @apply break-words;
+}
+
+/* Ensure images don't overflow */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* Ensure grid items don't overflow */
+.grid {
+  @apply gap-4;
+}
