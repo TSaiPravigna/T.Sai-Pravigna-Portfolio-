@@ -87,7 +87,7 @@ function App() {
     {
       title: 'Other Skills',
       icon: <Layers className="w-6 h-6" />,
-      skills: ['REST APIs', 'GraphQL', 'Agile', 'CI/CD']
+      skills: ['Agile', 'CI/CD']
     }
   ];
 
